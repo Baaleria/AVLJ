@@ -19,7 +19,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("v1/", views.visita1, name= "app1-v1"),
-    path("v3/", views.visita1, name= "app3-v3")
+    path("admin/", admin.site.urls)
+    path("app1/",include("app1.urls")),
+    path("app3/",include("app3.urls")),
 
 ]
